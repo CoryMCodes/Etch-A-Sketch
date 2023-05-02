@@ -8,33 +8,38 @@
   <title>Etch-A-Sketch</title>
 </head>
 <body>
-  <div class="page-title">Etch-A-Sketch</div>
-  <div class="container">
-    <div class="grid"></div>
-    <div class="options-container">
-      <div class="color-container">
-        <input type="color" id="color" name="color"
-               value="#333333">
-        <label for="color">Color</label>
-      </div>
-      <div class="range-container">
-        <input type="range" id="grid-size" name="grid-size"
-               min="1" max="32" value="16">
-        <label id="size-label" for="grid-size"></label>
-      </div>
-      <div class="mode-container">
-        <label for="mode">Change Mode</label>
-        <select name="mode" id="mode">
-          <option value="color">Color</option>
-          <option value="party">Party</option>
-          <option value="eraser">Eraser</option>
-        </select>
+  <div class="etch-a-sketch">
+    <div class="page-title">Etch-A-Sketch</div>
+    <div class="container">
+      <div class="grid"></div>
+      <div class="options-container">
+        <div class="options-container-top">
+          <div class="color-container">
+              <input type="color" id="color" name="color"
+                     value="#333333">
+              <label for="color">Color</label>
+            </div>
+            <div class="range-container">
+              <input type="range" id="grid-size" name="grid-size"
+                     min="1" max="32" value="16">
+              <label id="size-label" for="grid-size"></label>
+            </div>
+          <div class="mode-container">
+            <select name="mode" id="mode">
+              <option value="color">Color</option>
+              <option value="party">Party</option>
+              <option value="eraser">Eraser</option>
+            </select>
+            <label for="mode">Change Mode</label>
+          </div> 
+        </div> 
+        <div class="options-container-bottom">
+          <div class="reset-container">
+            <button id="resetBtn">Reset</button>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="reset-container">
-      <button id="resetBtn">Reset</button>
-    </div>
-    
   </div>
   <script src="sketch.js" defer></script>
 </body>
