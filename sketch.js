@@ -1,6 +1,7 @@
 // get required html elements;
 const gridSlider = document.getElementById('grid-size');
 const grid = document.querySelector(".grid");
+const colorPicker = document.getElementById('color');
 
 // set mouseDown default state
 let mouseDown = false;
@@ -12,6 +13,7 @@ document.getElementById('size-label').innerHTML = gridSlider.value + ' x ' + gri
 // reset function
 function reset() {
   grid.textContent = "";
+  colorPicker.value = "#333333"
   buildGrid(gridSlider.value);
 }
 // event listener that that detects input change and calls buildGrid() with input value
@@ -25,7 +27,8 @@ document.getElementById("resetBtn").addEventListener('click', reset)
 // function that changes grid item color based on selected color
 function changeColor(e) {
   if(e.type === "mouseover" && !mouseDown) return;
-  e.target.style.cssText = "background-color: black;"
+  let color = colorPicker.value;
+  e.target.style.cssText = `background-color: ${color};`
 
 } 
 // builds grid items inside grid container based on slider input value
