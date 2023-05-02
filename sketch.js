@@ -25,7 +25,8 @@ gridSlider.addEventListener("input", ()=> {
 
 // add listener to reset button
 document.getElementById("resetBtn").addEventListener('click', reset)
-// function that gets random color
+
+// function that returns random RGB value
 function getRandomColor(){
   let randomValueOne = Math.floor(Math.random() * 255)
   let randomValueTwo = Math.floor(Math.random() * 255)

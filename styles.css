@@ -14,8 +14,10 @@
 
 .options-container{
   display: flex;
-  justify-content: space-around;
-  margin: 56px 0px 24px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin: 35px 0px 35px 0px;
 }
 
 .mode-container{
@@ -26,4 +28,35 @@
 .reset-container{
   display: flex;
   justify-content: center;
+}
+
+.color-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+}
+#color::-webkit-color-swatch {
+  border-radius: 50%;
+ 
+}
+#color::-moz-color-swatch {
+  border-radius: 50%;
+  
+}
+
+.range-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
