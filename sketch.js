@@ -1,6 +1,8 @@
 // get required html elements;
 const gridSlider = document.getElementById('grid-size');
 const grid = document.querySelector(".grid");
+
+// set mouseDown default state
 let mouseDown = false;
 document.body.onmousedown = () => mouseDown = true;
 document.body.onmouseup = () => mouseDown = false;
@@ -13,7 +15,6 @@ gridSlider.addEventListener("input", ()=> {
   grid.textContent = "";
   buildGrid(gridSlider.value);
 })
-
 
 
 // function that changes grid item color based on selected color
