@@ -4,11 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <title>Etch-A-Sketch</title>
 </head>
 <body>
   <div class="container">
-
+    <div class="page-title">Etch-A-Sketch</div>
+    <div class="grid-container"></div>
+    <div class="grid"></div>
+    <div class="options-container">
+      <div>
+        <input type="range" id="grid-size" name="grid-size"
+               min="1" max="32" value="16">
+        <label id="size-label" for="grid-size"></label>
+      </div>
+    </div>
   </div>
+  <script src="sketch.js" defer></script>
 </body>
 </html>
