@@ -1,4 +1,8 @@
-
+.page-title{
+  font-size: 3em;
+  margin: 24px auto;
+  text-align: center;
+}
 .grid{
   display: grid;
   grid-template-columns: repeat(16, 20px);
@@ -6,4 +10,20 @@
   height: 500px;
   margin: auto;
   border: black 2px solid;
+}
+
+.options-container{
+  display: flex;
+  justify-content: space-around;
+  margin: 56px 0px 24px 0px;
+}
+
+.mode-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.reset-container{
+  display: flex;
+  justify-content: center;
 }

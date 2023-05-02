@@ -2,6 +2,7 @@
 const gridSlider = document.getElementById('grid-size');
 const grid = document.querySelector(".grid");
 const colorPicker = document.getElementById('color');
+const modeDropdown = document.getElementById('mode');
 
 // set mouseDown default state
 let mouseDown = false;
@@ -22,13 +23,24 @@ gridSlider.addEventListener("input", ()=> {
   reset();
 })
 
+// add listener to reset button
 document.getElementById("resetBtn").addEventListener('click', reset)
-
+// function that gets random color
+function getRandomColor(){
+  let randomValueOne = Math.floor(Math.random() * 255)
+  let randomValueTwo = Math.floor(Math.random() * 255)
+  let randomValueThree = Math.floor(Math.random() * 255)
+  return `rgb(${randomValueOne}, ${randomValueTwo}, ${randomValueThree})`
+}
 // function that changes grid item color based on selected color
 function changeColor(e) {
-  if(e.type === "mouseover" && !mouseDown) return;
   let color = colorPicker.value;
-  e.target.style.cssText = `background-color: ${color};`
+  if(e.type === "mouseover" && !mouseDown) return;
+  if(modeDropdown.value === "party") {
+    e.target.style.cssText = `background-color: ${getRandomColor()}`
+  }else{
+    e.target.style.cssText = `background-color: ${color};`
+  }
 
 } 
 // builds grid items inside grid container based on slider input value
