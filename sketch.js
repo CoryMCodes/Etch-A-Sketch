@@ -39,8 +39,10 @@ function changeColor(e) {
   if(e.type === "mouseover" && !mouseDown) return;
   if(modeDropdown.value === "party") {
     e.target.style.cssText = `background-color: ${getRandomColor()}`
-  }else{
+  }else if (modeDropdown.value === "color"){
     e.target.style.cssText = `background-color: ${color};`
+  }else {
+    e.target.style.cssText = 'backgroud-color: white;'
   }
 
 } 

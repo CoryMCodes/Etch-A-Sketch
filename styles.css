@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+
 .page-title{
+  font-family: "Darumadrop One", cursive, 'Times New Roman', Times, serif;
   font-size: 3em;
   margin: 24px auto;
   text-align: center;
