@@ -9,13 +9,18 @@ document.body.onmouseup = () => mouseDown = false;
 
 document.getElementById('size-label').innerHTML = gridSlider.value + ' x ' + gridSlider.value;
 
+// reset function
+function reset() {
+  grid.textContent = "";
+  buildGrid(gridSlider.value);
+}
 // event listener that that detects input change and calls buildGrid() with input value
 gridSlider.addEventListener("input", ()=> {
   document.getElementById('size-label').innerHTML = gridSlider.value + ' x ' + gridSlider.value;
-  grid.textContent = "";
-  buildGrid(gridSlider.value);
+  reset();
 })
 
+document.getElementById("resetBtn").addEventListener('click', reset)
 
 // function that changes grid item color based on selected color
 function changeColor(e) {
